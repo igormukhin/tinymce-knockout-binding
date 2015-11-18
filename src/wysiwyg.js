@@ -46,6 +46,10 @@
 					tinymce.setContent( value );
 					tinymce.execCommand( 'keyup' );
 				}
+			} else {
+				// We need to remember the value that was updated during TinyMCE initialization,
+				// otherwise TinyMCE will show up with the old value
+				$( element ).val( value );
 			}
 		}
 
